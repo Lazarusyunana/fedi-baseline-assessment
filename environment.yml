@@ -1,0 +1,9 @@
+name: fedi-baseline-assessment
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - openpyxl
+  - pip
+  - pip:
+      - pyxform
