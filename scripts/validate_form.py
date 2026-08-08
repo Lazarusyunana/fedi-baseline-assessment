@@ -31,14 +31,14 @@ def main():
 
     warnings = []
     try:
-        xls2xform_convert(str(FORM), str(XML_OUT), warnings=warnings)
+        xls2xform_convert(str(FORM), str(XML_OUT))
     except Exception as e:
         result = f"FAIL: pyxform {version}\n{e}\n"
         RESULT_OUT.write_text(result)
         print(result, file=sys.stderr)
         sys.exit(1)
 
-    result = f"PASS: pyxform {version}\nWarnings:\n" + "\n".join(warnings)
+    result = f"PASS: pyxform {version}\n"
     RESULT_OUT.write_text(result)
     print(result)
 
